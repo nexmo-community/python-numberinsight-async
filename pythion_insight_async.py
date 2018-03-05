@@ -24,7 +24,6 @@ def getInsight(number, url_root):
 
 @app.route('/get/<number>', methods=['GET', 'POST'])
 def lookup(number):
-    print(request.url_root)
     fname = "files/{}.pkl".format(number)
     try:
         data = pickle.load(open(fname, "rb" ))
